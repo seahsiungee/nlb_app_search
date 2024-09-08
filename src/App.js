@@ -17,6 +17,9 @@ import {
 import { Layout } from "@elastic/react-search-ui-views";
 import "@elastic/react-search-ui-views/lib/styles/styles.css";
 
+import { CustomResultView } from "./CustomResultView";
+import "./styles.css";
+
 import {
   buildAutocompleteQueryConfig,
   buildFacetConfigFromConfig,
@@ -68,6 +71,7 @@ export default function App() {
                   }
                   bodyContent={
                     <Results
+                      resultView={CustomResultView}
                       titleField={getConfig().titleField}
                       urlField={getConfig().urlField}
                       thumbnailField={getConfig().thumbnailField}

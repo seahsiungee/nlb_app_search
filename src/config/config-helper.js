@@ -1,4 +1,4 @@
-import config from "../config/engine.json";
+import config from "./engine.json";
 
 /**
  * This file abstracts most logic around the configuration of the Reference UI.
@@ -173,12 +173,12 @@ export function buildSortOptionsFromConfig() {
     },
     ...(config.sortFields || []).reduce((acc, sortField) => {
       acc.push({
-        name: `${capitalizeFirstLetter(sortField)} ASC`,
+        name: `Archived Date Ascending`,
         value: sortField,
         direction: "asc"
       });
       acc.push({
-        name: `${capitalizeFirstLetter(sortField)} DESC`,
+        name: `Archived Date Descending`,
         value: sortField,
         direction: "desc"
       });
